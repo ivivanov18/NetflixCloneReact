@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
-    "test": "jest"
+    "test": "jest",
+    "format": "prettier -w"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -60,6 +61,8 @@
   "dependencies": {
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
+    "axios": "^0.20.0",
+    "prettier": "^2.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
