@@ -1,9 +1,6 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 
-import Message from './components/Message';
+import App from "./App";
 
-ReactDOM.render(
-    <Message from="Ivan" body="Hi React Typescript"/>,
-    document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));
