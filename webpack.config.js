@@ -1,12 +1,14 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
-const webpack = require("webpack");
+const nodeExternals = require("webpack-node-externals");
 
 module.exports = () => {
     return {
         entry: "./src/index.tsx",
         devtool: "inline-source-map",
+        externals: [nodeExternals()],
+        target: "node", // to exclude built-in node modules like path
         resolve: {
             extensions: [".ts", ".tsx", ".js"],
         },
@@ -20,7 +22,7 @@ module.exports = () => {
                 {
                     test: /\.tsx?$/,
                     loader: "awesome-typescript-loader",
-                    exclude: /node_modules/,
+                    exclude: path.resolve(__dirname, "node_modules"),
                 },
                 {
                     test: /\.css$/i,
