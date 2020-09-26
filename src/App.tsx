@@ -13,6 +13,7 @@ function App() {
                 title="Neflix originals"
                 fetchUrl={requests.fetchNetflixOriginals}
                 httpClient={httpClient}
+                isLarge
             />
             <Row
                 data-test="row-component"

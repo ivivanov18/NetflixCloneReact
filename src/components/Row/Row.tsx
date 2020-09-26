@@ -2,7 +2,7 @@ import * as React from "react";
 import MainApi from "../../api/MainApi";
 import "./Row.css";
 
-function Row({ title, fetchUrl, httpClient }: RowProps) {
+function Row({ title, fetchUrl, httpClient, isLarge }: RowProps) {
     const [movies, setMovies] = React.useState([]);
 
     React.useEffect(() => {
@@ -20,8 +20,12 @@ function Row({ title, fetchUrl, httpClient }: RowProps) {
                 {movies.map((movie) => (
                     <img
                         key={movie.id}
-                        className="row__poster"
-                        src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                        className={`row__poster ${
+                            isLarge ? "row__posterLarge" : ""
+                        }`}
+                        src={`https://image.tmdb.org/t/p/w500${
+                            isLarge ? movie.poster_path : movie.backdrop_path
+                        }`}
                         alt={movie.original_name}
                     />
                 ))}
@@ -34,6 +38,7 @@ export interface RowProps {
     title: string;
     fetchUrl: string;
     httpClient: MainApi;
+    isLarge?: boolean;
 }
 
 export default Row;
