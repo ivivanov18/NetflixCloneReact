@@ -1,3 +1,4 @@
+const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
@@ -7,8 +8,8 @@ module.exports = () => {
     return {
         entry: "./src/index.tsx",
         devtool: "inline-source-map",
-        externals: [nodeExternals()],
-        target: "node", // to exclude built-in node modules like path
+        // externals: [nodeExternals()], // to exclude node modules
+        // target: "node", // to exclude built-in node modules like path
         resolve: {
             extensions: [".ts", ".tsx", ".js"],
         },
