@@ -10,7 +10,7 @@ const httpClient = new HttpClient(API_BASE_URL);
 
 function App() {
     return (
-        <React.Fragment>
+        <div className="app">
             <Banner
                 httpClient={httpClient}
                 fetchUrl={requests.fetchNetflixOriginals}
@@ -64,7 +64,7 @@ function App() {
                 fetchUrl={requests.fetchDocumentaries}
                 httpClient={httpClient}
             />
-        </React.Fragment>
+        </div>
     );
 }
 
