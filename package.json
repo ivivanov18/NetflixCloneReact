@@ -23,7 +23,10 @@
             "raf/polyfill"
         ],
         "testRegex": ".test.(ts|tsx|js)$",
-        "setupTestFrameworkScriptFile": "<rootDir>src/setupTests.ts"
+        "setupTestFrameworkScriptFile": "<rootDir>src/setupTests.ts",
+        "moduleNameMapper": {
+            "\\.css$": "identity-obj-proxy"
+        }
     },
     "repository": {
         "type": "git",
@@ -52,6 +55,7 @@
         "enzyme": "^3.11.0",
         "enzyme-adapter-react-16": "^1.15.4",
         "html-webpack-plugin": "^4.5.0",
+        "identity-obj-proxy": "^3.0.0",
         "jest": "^26.4.2",
         "jest-enzyme": "^7.1.2",
         "raf": "^3.4.1",
