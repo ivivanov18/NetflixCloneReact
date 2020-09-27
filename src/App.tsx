@@ -1,13 +1,20 @@
 import * as React from "react";
 import Row from "./components/Row/Row";
+import Banner from "./components/Banner/Banner";
 import { requests, API_BASE_URL } from "./api/api";
 import HttpClient from "./api/MainApi";
+
+import "./App.css";
 
 const httpClient = new HttpClient(API_BASE_URL);
 
 function App() {
     return (
         <React.Fragment>
+            <Banner
+                httpClient={httpClient}
+                fetchUrl={requests.fetchNetflixOriginals}
+            />
             <Row
                 data-test="row-component"
                 title="Neflix originals"
