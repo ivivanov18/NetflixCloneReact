@@ -1,0 +1,16 @@
+nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__logo {
+    width: 14em;
+    object-fit: contain;
+}
+
+.navbar__avatar {
+    width: 4em;
+    object-fit: contain;
+}

@@ -1,6 +1,7 @@
 import * as React from "react";
 import Row from "./components/Row/Row";
 import Banner from "./components/Banner/Banner";
+import Navbar from "./components/Navbar/Navbar";
 import { requests, API_BASE_URL } from "./api/api";
 import HttpClient from "./api/MainApi";
 
@@ -11,6 +12,7 @@ const httpClient = new HttpClient(API_BASE_URL);
 function App() {
     return (
         <div className="app">
+            <Navbar />
             <Banner
                 httpClient={httpClient}
                 fetchUrl={requests.fetchNetflixOriginals}
