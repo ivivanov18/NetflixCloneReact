@@ -7,7 +7,7 @@
         "start": "webpack-dev-server --mode development --open --hot",
         "build": "webpack --mode production",
         "test": "jest",
-        "coverage": "jest collect-coverage",
+        "coverage": "jest --coverage",
         "format": "prettier -w"
     },
     "jest": {
